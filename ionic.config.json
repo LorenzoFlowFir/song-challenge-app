@@ -1,0 +1,7 @@
+{
+  "name": "Song Challenge App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

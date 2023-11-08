@@ -6,6 +6,7 @@ import {
   IonContent,
 } from '@ionic/angular/standalone';
 import { SongChallengeComponent } from '../song-challenge/song-challenge.component';
+import { MoreChallengeComponent } from '../more-challenge/more-challenge.component';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,7 @@ import { SongChallengeComponent } from '../song-challenge/song-challenge.compone
     IonTitle,
     IonContent,
     SongChallengeComponent,
+    MoreChallengeComponent,
   ],
 })
 export class HomePage {

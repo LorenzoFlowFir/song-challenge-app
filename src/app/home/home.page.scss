@@ -25,3 +25,23 @@
 #container a {
   text-decoration: none;
 }
+
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+::-webkit-scrollbar.ios {
+  display: none !important;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+}
+
+.scroll-bar-indicator {
+  display: none !important;
+}
+
+.header.ios {
+  background-color: t#1f1f1f;
+}

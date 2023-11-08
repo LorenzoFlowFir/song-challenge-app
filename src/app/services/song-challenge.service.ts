@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
 import { SongChallenge } from '../models/song-challenge.model';
+import { DiscordDataService } from './discord-data.service';
 
 @Injectable({
   providedIn: 'root',
@@ -9,15 +10,9 @@ import { SongChallenge } from '../models/song-challenge.model';
 export class SongChallengeService {
   private apiUrl = 'http://eu.pylex.me:20827/get-discord-data';
 
-  constructor(private http: HttpClient) {}
+  constructor(public discordDataService: DiscordDataService) {}
 
   getDiscordData(): Observable<SongChallenge> {
-    return this.http.get<SongChallenge>(this.apiUrl).pipe(
-      tap((data) => {
-        if (!data.coverUrls || data.coverUrls.length === 0) {
-          console.error('No cover URLs found in the response data');
-        }
-      })
-    );
+    return this.discordDataService.getDiscordData();
   }
 }

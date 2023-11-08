@@ -1,0 +1,24 @@
+<!-- app-more-challenge.component.html -->
+<div id="more-challenge">
+  <div
+    class="challenge-container"
+    *ngFor="let songChallenge of songsChallenges"
+  >
+    <ion-img
+      [src]="songChallenge.coverUrls"
+      alt="Challenge Image"
+      class="challenge-image"
+      (click)="lightbox.imageSrc = songChallenge.coverUrls; lightbox.show()"
+    />
+    <div class="challenge-info">
+      <strong>{{
+        songChallenge.titre.length > 35
+          ? (songChallenge.titre | slice : 0 : 35) + "..."
+          : songChallenge.titre
+      }}</strong>
+      <p>{{ songChallenge.date }}</p>
+    </div>
+    <app-lightbox #lightbox></app-lightbox>
+  </div>
+  <ion-button>Default</ion-button>
+</div>

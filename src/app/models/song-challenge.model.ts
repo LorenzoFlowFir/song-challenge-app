@@ -1,5 +1,5 @@
 export interface SongChallenge {
-  coverUrls: string[];
+  coverUrls: string;
   titre: string;
   date: string;
 }

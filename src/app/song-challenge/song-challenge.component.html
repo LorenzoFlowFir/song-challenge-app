@@ -1,9 +1,11 @@
 <ion-content id="container">
-  <ion-spinner *ngIf="isLoading"></ion-spinner>
-  
+  <ng-container *ngIf="isLoading">
+    <ion-spinner></ion-spinner>
+  </ng-container>
+
   <ng-container *ngIf="!isLoading">
-    <img [src]="songChallengeUrl" alt="Test"/>
+    <img [src]="songChallengeUrl" alt="Test" />
     <strong>{{ songChallengeDate }}</strong>
-    <app-more-challenge></app-more-challenge>
+    <app-main-challenges></app-main-challenges>
   </ng-container>
 </ion-content>

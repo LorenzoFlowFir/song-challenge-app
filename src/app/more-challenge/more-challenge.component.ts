@@ -14,17 +14,38 @@ import { SongChallenge } from '../models/song-challenge.model';
 })
 export class MoreChallengeComponent implements OnInit {
   public songsChallenges: SongChallenge[] = [];
-
+  public isLoading: boolean = true;
+  private currentIndex = 0;
+  private batchSize = 15;
   constructor(private discordDataService: DiscordDataService) {}
 
   ngOnInit() {
+    this.loadMoreData();
+  }
+
+  loadMoreData(event?: any) {
     this.discordDataService.getDiscordData().subscribe((data) => {
-      for (let i = 1; i < 4; i++) {
+      const nextIndex = this.currentIndex + this.batchSize;
+      for (
+        let i = this.currentIndex;
+        i < nextIndex && i < data.coverUrls.length;
+        i++
+      ) {
         this.songsChallenges.push({
           coverUrls: data.coverUrls[i],
           titre: data.titre[i],
           date: data.date[i],
         });
+      }
+      this.currentIndex = nextIndex;
+      this.isLoading = false;
+      if (event) {
+        event.target.complete();
+      }
+
+      // Si tous les éléments sont chargés, désactiver l'infinite scroll
+      if (this.currentIndex >= data.coverUrls.length) {
+        event.target.disabled = true;
       }
     });
   }

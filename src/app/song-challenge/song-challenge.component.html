@@ -1,8 +1,9 @@
 <ion-content id="container">
-  <ion-img [src]="songChallengeUrl" alt="Test"></ion-img>
-  <!--<p>
-    {{ songChallengeTitle }}
-  </p>-->
-  <strong>{{ songChallengeDate }}</strong>
-  <app-more-challenge></app-more-challenge>
+  <ion-spinner *ngIf="isLoading"></ion-spinner>
+  
+  <ng-container *ngIf="!isLoading">
+    <img [src]="songChallengeUrl" alt="Test"/>
+    <strong>{{ songChallengeDate }}</strong>
+    <app-more-challenge></app-more-challenge>
+  </ng-container>
 </ion-content>

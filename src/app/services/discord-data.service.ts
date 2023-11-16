@@ -8,7 +8,8 @@ import { SongChallenge } from '../models/song-challenge.model';
   providedIn: 'root',
 })
 export class DiscordDataService {
-  private apiUrl = 'http://eu.pylex.me:20827/get-discord-data'; // Mettez à jour l'URL ici
+  //private apiUrl = 'http://flowfir.com:5555/get-discord-data'; // Mettez à jour l'URL ici
+  private apiUrl = 'http://eu.pylex.me:20827/get-discord-data';
 
   constructor(private http: HttpClient) {}
 

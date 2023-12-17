@@ -32,3 +32,10 @@
 #more-challenge {
   margin-top: 5%;
 }
+
+@media (min-width: 768px) {
+  // 768px est un point de rupture courant pour les écrans desktop
+  #noDesktop {
+    display: none; // Cache l'élément sur les écrans desktop
+  }
+}

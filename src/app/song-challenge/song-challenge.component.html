@@ -1,11 +1,15 @@
 <ion-content id="container">
-  <ng-container *ngIf="isLoading">
+  <ion-app *ngIf="isLoading">
     <ion-spinner></ion-spinner>
-  </ng-container>
+  </ion-app>
 
-  <ng-container *ngIf="!isLoading">
-    <img [src]="songChallengeUrl" alt="Test" />
+  <ion-app *ngIf="!isLoading">
+    <ion-img
+      class="song-challenge-image"
+      [src]="songChallengeUrl"
+      alt="Image du jour"
+    />
     <strong>{{ songChallengeDate }}</strong>
     <app-main-challenges></app-main-challenges>
-  </ng-container>
+  </ion-app>
 </ion-content>

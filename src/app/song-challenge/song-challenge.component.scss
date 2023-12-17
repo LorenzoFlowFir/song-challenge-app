@@ -3,10 +3,6 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-ion-img.md {
-  width: 500px;
-}
-
 #container {
   text-align: center;
 
@@ -37,4 +33,19 @@ ion-img.md {
 
 ion-img.web {
   align-content: center;
+}
+
+@media (min-width: 768px) {
+  // 768px est un point de rupture courant pour les écrans desktop
+  .song-challenge-image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover; // Optionnel, pour gérer comment l'image est ajustée dans le cadre
+    margin: 0 auto; // Centre l'image horizontalement
+  }
+
+  #container {
+    justify-content: center; // Centre le contenu horizontalement
+    align-items: center; // Centre le contenu verticalement
+  }
 }

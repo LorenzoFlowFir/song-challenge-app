@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Platform } from '@ionic/angular';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 
 @Component({
@@ -8,5 +9,14 @@ import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
   imports: [IonApp, IonRouterOutlet],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private platform: Platform) {
+    this.initializeApp();
+  }
+
+  initializeApp() {
+    this.platform.ready().then(() => {
+      // Forcer le mode sombre
+      document.body.classList.toggle('dark', true);
+    });
+  }
 }

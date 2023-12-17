@@ -1,7 +1,11 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { SongChallengeService } from '../services/song-challenge.service';
-import { IonicModule } from '@ionic/angular';
-import { IonImg } from '@ionic/angular/standalone';
+import {
+  IonImg,
+  IonContent,
+  IonApp,
+  IonSpinner,
+} from '@ionic/angular/standalone';
 import { CommonModule } from '@angular/common';
 import { MoreChallengeComponent } from '../more-challenge/more-challenge.component';
 import { MainChallengesComponent } from '../more-challenge/main-challenges/main-challenges.component';
@@ -11,11 +15,13 @@ import { MainChallengesComponent } from '../more-challenge/main-challenges/main-
   templateUrl: './song-challenge.component.html',
   styleUrls: ['./song-challenge.component.scss'],
   imports: [
-    IonicModule,
     IonImg,
     MoreChallengeComponent,
     CommonModule,
     MainChallengesComponent,
+    IonContent,
+    IonApp,
+    IonSpinner,
   ],
   standalone: true,
 })

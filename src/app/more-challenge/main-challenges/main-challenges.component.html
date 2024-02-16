@@ -25,5 +25,30 @@
       <app-lightbox #lightbox></app-lightbox>
     </div>
     <ion-button (click)="navigateToPage()">More Challenge</ion-button>
+
+    <ion-button (click)="openModal()" id="open-custom-dialog"
+      >Create a Challenge</ion-button
+    >
+
+    <ion-modal id="example-modal" #modal trigger="open-custom-dialog">
+      <ng-template>
+        <div class="wrapper">
+          <h1>Dialog header</h1>
+          <div class="padder">
+            <ion-input
+              [(ngModel)]="challengeName"
+              label="Challenge Name"
+              label-placement="floating"
+              fill="solid"
+              placeholder="Enter Challenge Name"
+            ></ion-input>
+            <ion-button (click)="closeModal()" color="danger"
+              >Annuler</ion-button
+            >
+            <ion-button (click)="valid()">Valider</ion-button>
+          </div>
+        </div>
+      </ng-template>
+    </ion-modal>
   </div>
 </div>

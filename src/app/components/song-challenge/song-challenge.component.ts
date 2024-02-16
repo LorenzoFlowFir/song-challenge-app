@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { SongChallengeService } from '../services/song-challenge.service';
+import { SongChallengeService } from '../../services/song-challenge.service';
 import {
   IonImg,
   IonContent,
@@ -7,8 +7,8 @@ import {
   IonSpinner,
 } from '@ionic/angular/standalone';
 import { CommonModule } from '@angular/common';
-import { MoreChallengeComponent } from '../more-challenge/more-challenge.component';
-import { MainChallengesComponent } from '../more-challenge/main-challenges/main-challenges.component';
+import { MoreChallengeComponent } from '../../more-challenge/more-challenge.component';
+import { MainChallengesComponent } from '../../more-challenge/main-challenges/main-challenges.component';
 
 @Component({
   selector: 'app-song-challenge',

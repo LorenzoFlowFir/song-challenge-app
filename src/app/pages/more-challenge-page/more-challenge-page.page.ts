@@ -5,7 +5,7 @@ import {
   IonTitle,
   IonContent,
 } from '@ionic/angular/standalone';
-import { SongChallengeComponent } from '../../song-challenge/song-challenge.component';
+import { SongChallengeComponent } from '../../components/song-challenge/song-challenge.component';
 import { MoreChallengeComponent } from '../../more-challenge/more-challenge.component';
 
 @Component({

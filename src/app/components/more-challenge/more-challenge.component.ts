@@ -32,6 +32,7 @@ export class MoreChallengeComponent implements OnInit {
         i++
       ) {
         this.songsChallenges.push({
+          id: '',
           coverUrls: data.coverUrls[i],
           titre: data.titre[i],
           date: data.date[i],

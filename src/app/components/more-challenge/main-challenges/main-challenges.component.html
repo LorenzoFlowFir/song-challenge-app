@@ -1,4 +1,3 @@
-<!-- app-more-challenge.component.html -->
 <div id="more-challenge">
   <ng-container *ngIf="isLoading">
     <ion-spinner></ion-spinner>
@@ -7,6 +6,7 @@
     <div
       class="challenge-container"
       *ngFor="let songChallenge of songsChallenges"
+      id="noDesktop"
     >
       <ion-img
         [src]="songChallenge.coverUrls"
@@ -24,12 +24,6 @@
       </div>
       <app-lightbox #lightbox></app-lightbox>
     </div>
+    <ion-button (click)="navigateToPage()">More Challenge</ion-button>
   </div>
-  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadMoreData($event)">
-    <ion-infinite-scroll-content
-      loadingSpinner="bubbles"
-      loadingText="Chargement de plus de défis..."
-    >
-    </ion-infinite-scroll-content>
-  </ion-infinite-scroll>
 </div>

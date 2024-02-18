@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'Song Challenge App',
+  appName: 'song-challenge-mk2',
   webDir: 'www',
   server: {
     androidScheme: 'https'

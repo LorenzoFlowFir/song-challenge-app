@@ -1,0 +1,22 @@
+.info-page {
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --margin-start: 16px;
+  --margin-end: 16px;
+  --margin-top: 16px;
+  --margin-bottom: 16px;
+}
+
+.info-page .info-section p,
+.info-page .info-section h2,
+.info-page .info-section ul {
+  text-align: justify;
+  margin: 16px; /* Ajuste les marges pour chaque paragraphe, titre, et liste */
+}
+
+/* Style supplémentaire pour les listes pour s'assurer que les puces soient alignées avec le texte justifié */
+.info-page .info-section ul {
+  padding-inline-start: 20px;
+}

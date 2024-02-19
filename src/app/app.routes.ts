@@ -13,4 +13,9 @@ export const routes: Routes = [
         (m) => m.MoreChallengePagePage
       ),
   },
+  {
+    path: 'info',
+    loadComponent: () =>
+      import('./pages/info/info.page').then((m) => m.InfoPage),
+  },
 ];

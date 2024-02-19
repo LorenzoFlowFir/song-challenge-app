@@ -15,12 +15,12 @@
         [src]="songChallenge.coverUrls"
         alt="Challenge Image"
         class="challenge-image"
-        (click)="lightbox.imageSrc = songChallenge.coverUrls; lightbox.show()"
+        (click)="showTitle(songChallenge)"
       />
       <div class="challenge-info">
         <strong>{{
-          songChallenge.titre.length > 35
-            ? (songChallenge.titre | slice : 0 : 33) + "..."
+          songChallenge.titre.length > 25
+            ? (songChallenge.titre | slice : 0 : 23) + "..."
             : songChallenge.titre
         }}</strong>
 

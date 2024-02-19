@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import { DiscordDataService } from '../services/discord-data.service';
 import { LightboxComponent } from './lightbox/lightbox.component';
 import { CommonModule } from '@angular/common';
-import { SongChallenge } from '../models/song-challenge.model';
+import { DiscordDataService } from 'src/app/services/discord-data.service';
+import { SongChallenge } from 'src/app/models/song-challenge.model';
 
 @Component({
   selector: 'app-more-challenge',

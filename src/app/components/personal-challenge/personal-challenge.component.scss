@@ -1,5 +1,5 @@
 .challenge-container {
-  border: 2px solid #1db954;
+  border: 2px solid #18cccc;
   border-radius: 25px;
   padding: 16px;
   display: flex;
@@ -68,6 +68,12 @@ ion-modal#example-modal ion-icon {
 
 ion-modal#example-modal .wrapper {
   margin-bottom: 10px;
+}
+
+//center a ion-button
+ion-button {
+  display: flex;
+  justify-content: center;
 }
 
 .padder {

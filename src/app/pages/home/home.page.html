@@ -1,11 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title size="medium" color="primary" class="ion-text-center"
-      >Song Challenge</ion-title
-    >
+    <ion-buttons slot="start">
+      <ion-button (click)="scrollToTop()">
+        <ion-icon name=""></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title size="medium" color="primary" class="ion-text-center">
+      Song Challenge
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="scrollToTop()">
+        <ion-icon name="information-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" #content>
   <app-song-challenge></app-song-challenge>
 </ion-content>

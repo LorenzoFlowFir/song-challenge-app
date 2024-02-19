@@ -7,8 +7,8 @@ import {
   IonSpinner,
 } from '@ionic/angular/standalone';
 import { CommonModule } from '@angular/common';
-import { MoreChallengeComponent } from '../../more-challenge/more-challenge.component';
-import { MainChallengesComponent } from '../../more-challenge/main-challenges/main-challenges.component';
+import { MoreChallengeComponent } from '../more-challenge/more-challenge.component';
+import { MainChallengesComponent } from '../more-challenge/main-challenges/main-challenges.component';
 
 @Component({
   selector: 'app-song-challenge',

@@ -20,12 +20,12 @@ import {
   collection,
   deleteDoc,
 } from '@angular/fire/firestore';
-import { LightboxComponent } from 'src/app/more-challenge/lightbox/lightbox.component';
 import { CommonModule } from '@angular/common';
 import { SongChallenge } from 'src/app/models/song-challenge.model';
 import { query, orderBy, limit, startAfter } from '@angular/fire/firestore';
 import { addIcons } from 'ionicons';
 import { trash, create } from 'ionicons/icons';
+import { LightboxComponent } from '../more-challenge/lightbox/lightbox.component';
 
 @Component({
   selector: 'app-personal-challenge',
@@ -134,6 +134,10 @@ export class PersonalChallengeComponent implements OnInit {
     if (data?.reload) {
       this.loadMoreData(); // Recharge les données si nécessaire
     }
+  }
+
+  showTitle(challenge: SongChallenge) {
+    alert(challenge.titre);
   }
 
   closeModal() {

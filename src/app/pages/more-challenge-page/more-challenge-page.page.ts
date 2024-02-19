@@ -12,10 +12,10 @@ import {
   IonIcon,
 } from '@ionic/angular/standalone';
 import { SongChallengeComponent } from '../../components/song-challenge/song-challenge.component';
-import { MoreChallengeComponent } from '../../more-challenge/more-challenge.component';
 import { PersonalChallengeComponent } from 'src/app/components/personal-challenge/personal-challenge.component';
 import { addIcons } from 'ionicons';
 import { people, person } from 'ionicons/icons';
+import { MoreChallengeComponent } from 'src/app/components/more-challenge/more-challenge.component';
 
 @Component({
   selector: 'app-more-challenge-page',

@@ -1,7 +1,0 @@
-{
-  "name": "song-challenge-mk2",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular-standalone"
-}

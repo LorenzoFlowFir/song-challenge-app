@@ -1,25 +1,18 @@
-# Utiliser une image Node.js comme base
+# Étape 1: Utiliser une image de base Node.js
 FROM node:latest
 
-# Définir le répertoire de travail dans le conteneur
-WORKDIR /src/app
+# Étape 2: Définir le répertoire de travail dans le conteneur
+WORKDIR /usr/src/app
 
-# Copier les fichiers package.json et package-lock.json
+# Étape 3: Copier les fichiers de dépendances et installer les modules
 COPY package*.json ./
-
-# Installer les dépendances du projet
 RUN npm install
-RUN npm install -g @ionic/cli
 
-# Copier les fichiers et dossiers du projet dans le répertoire de travail du conteneur
+# Étape 4: Copier le reste des fichiers du projet dans le conteneur
 COPY . .
 
-# Construire l'application Ionic
-RUN ionic build
+# Étape 5: Exposer le port sur lequel votre API s'exécute
+EXPOSE 5555
 
-# Exposer le port 3000
-EXPOSE 3000
-
-# Commande pour démarrer l'application
-ENTRYPOINT ["ionic"]
-CMD ["serve", "--no-open", "--host", "0.0.0.0", "--port", "3000"]
+# Étape 6: Définir la commande pour démarrer votre application
+CMD ["node", "index.js"]

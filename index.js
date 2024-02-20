@@ -7,11 +7,9 @@ const app = express();
 
 app.use(cors());
 
-bot.login(
-  "MTE1OTE3NDIyNDE5MjIyOTQ1Nw.Gf-c3B.qmCIfVVugaDcjmsvMzXrWJ4gMRzYdXouio_g1w"
-);
+bot.login("token");
 
-const channelID = "908744072024457217"; // Remplacez par l'ID de votre salon
+const channelID = "908744072024457217";
 
 app.get("/get-discord-data", async (req, res) => {
   try {
@@ -54,7 +52,5 @@ app.get("/get-discord-data", async (req, res) => {
 });
 
 app.listen(5555, () => {
-  console.log(
-    "Server is running on port 5555/get-discord-data"
-  );
+  console.log("Server is running on port 5555/get-discord-data");
 });

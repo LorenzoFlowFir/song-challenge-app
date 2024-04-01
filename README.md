@@ -10,7 +10,7 @@ ionic serve
 ```
 Et de mettre par la suite l'application en format mobile
 
-Il est aussi possible d'accéder à l'application (fonctionel) depuis ce lien : http://51.38.113.168:3000
+Il est aussi possible d'accéder à l'application (fonctionel) depuis ce lien : http://flowfir.com:3000
 
 ## Objectifs
 ![Capture d’écran 2024-02-18 160413](https://github.com/LorenzoFlowFir/song-challenge-app/assets/46107911/f75d9587-1ef2-4138-aae0-2104c249ad76)
